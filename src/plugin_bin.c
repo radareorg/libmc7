@@ -64,7 +64,6 @@ static ut32 read32(const ut8 *b) {
 	return a;
 }
 
-//static bool load_buffer(RzBinFile *bf, void **bin_obj, RzBuffer *b, ut64 loadaddr, Sdb *sdb) {
 static bool load_buffer(RzBinFile *bf, RzBinObject *bin_obj, RzBuffer *b, Sdb *sdb){
 
 	ut64 size;
