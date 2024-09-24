@@ -66,3 +66,12 @@ if get_option('build_shared_libs')
     install_dir: rizin_plugdir
   )
 endif
+libmc7_src = ['src' / 'simatic.c']
+exe = executable('test_simatic', ['unit' / 'test_simatic.c'] + libmc7_src,
+  c_args: [],
+  include_directories: include_directories(libmc7_incs),
+  dependencies: [],
+  install: false,
+  implicit_include_directories: false)
+
+test('test_simatic', exe)
